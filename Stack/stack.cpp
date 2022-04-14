@@ -34,7 +34,6 @@ public:
         if (position >= (sizeof(Stack_Array)/sizeof(Stack_Array[0]))) {
             Extend_Stack();
         }
-        cout << "New size of stack: " << sizeof(Stack_Array) / sizeof(T) << endl;
         Stack_Array[position] = value;
         position++;
     }
