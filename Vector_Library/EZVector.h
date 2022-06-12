@@ -7,13 +7,6 @@ Description:
 A simple library that performs cross product, magnitude, and other vector-related operations. To learn how to use this library read the README.md file!
 */
 
-/*
-TODO List:
-TODO: Add basic operators (+, -) to the vectors;
-TODO: Add a main function so if the user directly uses this library it can perform operations and choose what options to do.
-TODO: Add to Git so I can further explore options.
-*/
-
 //EZVector.h
 #pragma once
 
