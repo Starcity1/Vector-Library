@@ -13,7 +13,10 @@ and vector and scalar projections. This is a small project and I am hopeful to a
 `class vector3(float x = 0, flaot y = 0, float z = 0)`
 
 Vector3 is a representation of a 3D vector, the user can update its x, y, and z functions and can also call various functions contained in the class. It contains an x, y, z paramaters in the class constructor so the user can initialize a vector with specific float values.
-`vector3 Vector(1, 2, 3)`
+```
+// Creates a 3D vector object of form <1, 2, 3>
+vector3 Vector(1, 2, 3)
+```
 
 - `vector3 vector3::cross(T v)`
 This class method forms the cross product of the object being used and another (either vector3 or vector2) vector, it will return a vector3 class obejct.
