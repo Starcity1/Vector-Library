@@ -5,14 +5,12 @@ using namespace std;
 using namespace EZVector;
 
 int main() {
-    vector3 u(0, 4, -2);
-    vector3 v(0, -3, -2);
-    vector3 u_prime(0, -2, -4);
-    vector3 v_prime(-3, -2, 2);
+    vector2 U(1, 2);
+    vector2 V(4, 3);
 
-    printv(u.cross(v_prime));
+    vector3 W(10, 11);
 
-    printv(v.cross(u_prime));
+    printv(U + V);
+    printv(U + W);
 
-    printv(u.cross(v_prime) + u_prime.cross(v));
 }

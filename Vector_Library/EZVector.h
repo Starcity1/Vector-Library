@@ -78,6 +78,11 @@ namespace EZVector {
 
         //Operators.
         operator vector3();
+        vector3 operator+(vector3 v1);
+        vector2 operator+(vector2 v1);
+
+        vector3 operator-(vector3 v1);
+        vector2 operator-(vector2 v1);
 
     protected:
         float z = 0;
@@ -169,6 +174,26 @@ namespace EZVector {
     vector2::operator vector3() {
         vector3 new_v(x, y, z);
         return new_v;
+    }
+
+    vector2 vector2::operator+(vector2 v) {
+        vector2 sum (x + v.x, y + v.y);
+        return sum;
+    }
+
+    vector3 vector2::operator+(vector3 v) {
+        vector3 sum (x + v.x, y + v.y, z + v.z);
+        return sum;
+    }
+
+    vector2 vector2::operator-(vector2 v) {
+        vector2 sum (x - v.x, y - v.y);
+        return sum;
+    }
+
+    vector3 vector2::operator-(vector3 v) {
+        vector3 sum (x - v.x, y - v.y, z - v.z);
+        return sum;
     }
 
     // Functions available.
