@@ -1,6 +1,7 @@
 # ==== EZVector ====
-Author Starcity1
-Version 1.0.0
+Author: Starcity1
+
+Version: 1.0.0
 
 ## ==== Description ====
 Hello! This is my first library as I create various libraries and small projects to share!
