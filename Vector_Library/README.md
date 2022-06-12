@@ -17,8 +17,8 @@ and vector and scalar projections. This is a small project and I am hopeful to a
 // Creates a 3D vector object of form <1, 2, 3>
 vector3 Vector(1, 2, 3);
 ```
-- `vector3 vector3::cross(T v)`
-This class method forms the cross product of the object being used and another (either vector3 or vector2) vector, it will return a vector3 class obejct.
+`vector3 vector3::cross(T v)`
+:This class method forms the cross product of the object being used and another (either vector3 or vector2) vector, it will return a vector3 class obejct.
 The order of the cross product has the vector3 object being used as the first vector on the dot product and the vector used as parameter as the second vector being used.
 ```
 vector3 V(1, 1, 1);
