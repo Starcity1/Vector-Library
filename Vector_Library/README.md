@@ -10,12 +10,13 @@ and vector and scalar projections. This is a small project and I am hopeful to a
 [^1]: Please if anybody finds any bugs lmk, I bet that this code is full of them lol.
 
 ## ==== Functions ====
-
-Note: In every example a 'T' data type refers that the function can accept either vector3 or vector2 class objects.
-
 **namespace: EZVector**
 
-**'vector3' Class**
+
+
+**'vector3' Class :: **
+
+
 
 `class vector3(float x = 0, flaot y = 0, float z = 0)`
 
@@ -24,7 +25,7 @@ Note: In every example a 'T' data type refers that the function can accept eithe
 // Creates a 3D vector object of form <1, 2, 3>
 vector3 Vector(1, 2, 3);
 ```
-`vector3 vector3::cross(T v)`
+`vector3 vector3::cross(T v)`[^2]
 : This class method forms the cross product of the object being used and another (either vector3 or vector2) vector. It will return a vector3 class obejct.
 The order of the cross product has the vector3 object being used as the first vector on the dot product and the vector used as parameter as the second vector being used.
 ```
@@ -65,7 +66,10 @@ vector2 U(3, 2);
 printv(V - U);
 ```
 
-**'vector2' Class**
+
+**'vector2' Class :: **
+
+
 
 `class vector2(float x = 0, flaot y = 0)`
 
@@ -115,3 +119,23 @@ vector3 U(3, 2, 0);
 //This operation can be read as : 'V - U'
 printv(V - U);
 ```
+
+`vector3 vector2::vector3(vector2 V)`
+: This class operator allows the user to cast a vector2 class object into a vector3 class object. It will return a vector3 object.
+```
+vector2 V(1, 1);
+vector3 U(3, 2, 0);
+
+//The output of this printv value is <1, 1, 0> with a class type of vector3.
+printv(vector3(V));
+```
+
+
+
+** Other Functions :: **
+
+
+
+`printv(T vector)`
+
+[^2]: Note: In every example a 'T' data type refers that the function can accept either vector3 or vector2 class objects.
