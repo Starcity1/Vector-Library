@@ -32,7 +32,7 @@ The order of the cross product has the vector3 object being used as the first ve
 vector3 V(1, 1, 1);
 vector2 U(3, 2);
 
-//This operation can be read as : 'V X U'
+// This operation can be read as : 'V X U'
 printv(V.cross(U));
 ```
 
@@ -42,7 +42,7 @@ printv(V.cross(U));
 vector3 V(1, 1, 1);
 vector2 U(3, 2);
 
-//This operation can be read as : 'V ⋅ U'
+// This operation can be read as : 'V ⋅ U'
 printf(V.dot(U));
 ```
 
@@ -52,7 +52,7 @@ printf(V.dot(U));
 vector3 V(1, 1, 1);
 vector2 U(3, 2);
 
-//This operation can be read as : 'V + U'
+// This operation can be read as : 'V + U'
 printv(V + U);
 ```
 
@@ -62,7 +62,7 @@ printv(V + U);
 vector3 V(1, 1, 1);
 vector2 U(3, 2);
 
-//This operation can be read as : 'V - U'
+// This operation can be read as : 'V - U'
 printv(V - U);
 ```
 
@@ -86,7 +86,7 @@ The order of the cross product has the vector3 object being used as the first ve
 vector2 V(1, 1);
 vector3 U(3, 2, 0);
 
-//This operation can be read as : 'V X U'
+// This operation can be read as : 'V X U'
 printv(V.cross(U));
 ```
 
@@ -96,7 +96,7 @@ printv(V.cross(U));
 vector3 V(1, 1);
 vector2 U(3, 2, 0);
 
-//This operation can be read as : 'V ⋅ U'
+// This operation can be read as : 'V ⋅ U'
 printf(V.dot(U));
 ```
 
@@ -106,7 +106,7 @@ printf(V.dot(U));
 vector2 V(1, 1);
 vector3 U(3, 2, 0);
 
-//This operation can be read as : 'V + U'
+// This operation can be read as : 'V + U'
 printv(V + U);
 ```
 
@@ -116,7 +116,7 @@ printv(V + U);
 vector2 V(1, 1);
 vector3 U(3, 2, 0);
 
-//This operation can be read as : 'V - U'
+// This operation can be read as : 'V - U'
 printv(V - U);
 ```
 
@@ -126,7 +126,7 @@ printv(V - U);
 vector2 V(1, 1);
 vector3 U(3, 2, 0);
 
-//The output of this printv value is <1, 1, 0> with a class type of vector3.
+// The output of this printv value is <1, 1, 0> with a class type of vector3.
 printv(vector3(V));
 ```
 
@@ -136,6 +136,33 @@ printv(vector3(V));
 
 
 
-`printv(T vector)`
+`void printv(T vector)`
+: This is a special print statement that allows the user to print vector3 and vector2 values, the only parameter is the vector the user wants to print.
+```
+vector3 U(3, 2, 0);
 
-[^2]: Note: In every example a 'T' data type refers that the function can accept either vector3 or vector2 class objects.
+// The output will have format '<x, y, z>'.
+printv(U);
+```
+
+`T proj(T U, T V)`
+: This function will allow the user to create the vector projection of a vector U (first parameter) into vector V (second parameter). It will return either a vector3 or vector2 value.
+```
+vector2 V(1, 1);
+vector3 U(3, 2, 0);
+
+// This operation can be read as : 'proj_U (V)'
+printv(proj(V, U));
+```
+
+`float scal(T U, T V)`
+: This function will allow the user to calculate the scalar projection of a vector U (first parameter) into vector V (second parameter). It will return a float value
+```
+vector2 V(1, 1);
+vector3 U(3, 2, 0);
+
+// This operation can be read as : 'scal_U (V)'
+printv(scal(V, U));
+```
+
+[^2]: Note: In every example where a 'T' data type appears, it refers that the function can accept either vector3 or vector2 class objects.
