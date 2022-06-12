@@ -15,9 +15,11 @@ Note: In every example a 'T' data type refers that the function can accept eithe
 
 **namespace: EZVector**
 
+**'vector3' Class**
+
 `class vector3(float x = 0, flaot y = 0, float z = 0)`
 
-**Vector3** is a representation of a 3D vector, the user can update its x, y, and z functions and can also call various functions contained in the class. It contains an x, y, z paramaters in the class constructor so the user can initialize a vector with specific float values.
+**Vector3** is a representation of a 3D vector, the user can update its x, y, and z class attributes and can also call various functions contained in the class. It contains an x, y, z paramaters in the class constructor so the user can initialize a vector with specific float values.
 ```
 // Creates a 3D vector object of form <1, 2, 3>
 vector3 Vector(1, 2, 3);
@@ -58,6 +60,57 @@ printv(V + U);
 ```
 vector3 V(1, 1, 1);
 vector2 U(3, 2);
+
+//This operation can be read as : 'V - U'
+printv(V - U);
+```
+
+**'vector2' Class**
+
+`class vector2(float x = 0, flaot y = 0)`
+
+**Vector3** is a representation of a 2D vector, the user can update its x, and y class attributes and can also call various functions contained in the class. It contains x, y paramaters in the class constructor so the user can initialize a vector with specific float values.
+```
+// Creates a 3D vector object of form <1, 3>
+vector3 Vector(1, 3);
+```
+
+`T vector2::cross(T v)`
+: This class method forms the cross product of the object being used and another (either vector3 or vector2) vector. It will return a vector3 class obejct.
+The order of the cross product has the vector3 object being used as the first vector on the dot product and the vector used as parameter as the second vector being used.
+```
+vector2 V(1, 1);
+vector3 U(3, 2, 0);
+
+//This operation can be read as : 'V X U'
+printv(V.cross(U));
+```
+
+`float vector2::dot(T v)`
+: This class method calculates the dot product formed by the object being used and another (either vector3 or vector2) vector. It will return a float number.
+```
+vector3 V(1, 1);
+vector2 U(3, 2, 0);
+
+//This operation can be read as : 'V ⋅ U'
+printf(V.dot(U));
+```
+
+`T vector2::operator+(T V)`
+: This class operator creates the sum of the vector3 object being used and the another (either vector3 or vector2) vector. It will return either a vector3 or vector2 object.
+```
+vector2 V(1, 1);
+vector3 U(3, 2, 0);
+
+//This operation can be read as : 'V + U'
+printv(V + U);
+```
+
+`T vector3::operator-(T V)`
+: This class operator creates the difference of the vector3 object being used and the another (either vector3 or vector2) vector. It will return either a vector3 or vector2 object.
+```
+vector2 V(1, 1);
+vector3 U(3, 2, 0);
 
 //This operation can be read as : 'V - U'
 printv(V - U);
