@@ -5,9 +5,14 @@ Version 1.0.0
 ## ==== Description ====
 Hello! This is my first library as I create various libraries and small projects to share!
 EZVector is a library that supports 2D and 3D vector operations including adding, substractions, cross product, dot product,
-and vector and scalar projections. This is a small project and I am hopeful to add various other functions as I practice more with CPP. Below is a description for each function.
+and vector and scalar projections. This is a small project and I am hopeful to add various other functions as I practice more with CPP. Below is a description for each function.[^1]
+
+[^1]: Please if anybody finds any bugs lmk, I bet that this code is full of them lol.
 
 ## ==== Functions ====
+
+Note: In every example a 'T' data type refers that the function can accept either vector3 or vector2 class objects.
+
 **namespace: EZVector**
 
 `class vector3(float x = 0, flaot y = 0, float z = 0)`
@@ -18,7 +23,7 @@ and vector and scalar projections. This is a small project and I am hopeful to a
 vector3 Vector(1, 2, 3);
 ```
 `vector3 vector3::cross(T v)`
-:This class method forms the cross product of the object being used and another (either vector3 or vector2) vector, it will return a vector3 class obejct.
+: This class method forms the cross product of the object being used and another (either vector3 or vector2) vector. It will return a vector3 class obejct.
 The order of the cross product has the vector3 object being used as the first vector on the dot product and the vector used as parameter as the second vector being used.
 ```
 vector3 V(1, 1, 1);
@@ -26,4 +31,34 @@ vector2 U(3, 2);
 
 //This operation can be read as : 'V X U'
 printv(V.cross(U));
+```
+
+`float vector3::dot(T v)`
+: This class method calculates the dot product formed by the object being used and another (either vector3 or vector2) vector. It will return a float number.
+```
+vector3 V(1, 1, 1);
+vector2 U(3, 2);
+
+//This operation can be read as : 'V ⋅ U'
+printf(V.dot(U));
+```
+
+`vector3 vector3::operator+(T V)`
+: This class operator creates the sum of the vector3 object being used and the another (either vector3 or vector2) vector. It will return a vector3 object.
+```
+vector3 V(1, 1, 1);
+vector2 U(3, 2);
+
+//This operation can be read as : 'V + U'
+printv(V + U);
+```
+
+`vector3 vector3::operator-(T V)`
+: This class operator creates the difference of the vector3 object being used and the another (either vector3 or vector2) vector. It will return a vector3 object.
+```
+vector3 V(1, 1, 1);
+vector2 U(3, 2);
+
+//This operation can be read as : 'V - U'
+printv(V - U);
 ```
