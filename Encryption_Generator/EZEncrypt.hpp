@@ -19,10 +19,18 @@ TODO List:
 NOTE: All encryptions and decryptions methods will be stored on the same class generators.
 */
 
-#include "Source/ceasar.cpp"
+#include <iostream>
+#include <string>
 
-#pragma once;
+#ifndef EZENCRYPT_H
+#define EZENCRYPT_H
 
-namespace EZEncrypt {
-    
-}
+    class CeasarGen {
+    private:
+        int offset;
+    public:
+        CeasarGen();
+        void test();
+};
+
+#endif // EZENCRYPT_H
